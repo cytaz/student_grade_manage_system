@@ -1,0 +1,71 @@
+# Project: lab11
+# Makefile created by Dev-C++ 1.1.0.40
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = main.o Welcome.o Inquiry.o Branch.o Opt.o Add.o Load.o Delete.o Revise.o Count.o Read.o Test.o DataManage.o JudgeStu.o Write.o $(RES)
+LINKOBJ  = main.o Welcome.o Inquiry.o Branch.o Opt.o Add.o Load.o Delete.o Revise.o Count.o Read.o Test.o DataManage.o JudgeStu.o Write.o $(RES)
+LIBS     = -L"D:/Program Files/Smart-C++ 1.0/MinGW32/lib" -static-libstdc++ -static-libgcc -g3
+INCS     = -I"D:/Program Files/Smart-C++ 1.0/MinGW32/include"
+CXXINCS  = -I"D:/Program Files/Smart-C++ 1.0/MinGW32/include"
+BIN      = lab11.exe
+CXXFLAGS = $(CXXINCS)  -g3
+CFLAGS   = $(INCS)  -g3
+RM       = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+Welcome.o: Welcome.cpp
+	$(CPP) -c Welcome.cpp -o Welcome.o $(CXXFLAGS)
+
+Inquiry.o: Inquiry.cpp
+	$(CPP) -c Inquiry.cpp -o Inquiry.o $(CXXFLAGS)
+
+Branch.o: Branch.cpp
+	$(CPP) -c Branch.cpp -o Branch.o $(CXXFLAGS)
+
+Opt.o: Opt.cpp
+	$(CPP) -c Opt.cpp -o Opt.o $(CXXFLAGS)
+
+Add.o: Add.cpp
+	$(CPP) -c Add.cpp -o Add.o $(CXXFLAGS)
+
+Load.o: Load.cpp
+	$(CPP) -c Load.cpp -o Load.o $(CXXFLAGS)
+
+Delete.o: Delete.cpp
+	$(CPP) -c Delete.cpp -o Delete.o $(CXXFLAGS)
+
+Revise.o: Revise.cpp
+	$(CPP) -c Revise.cpp -o Revise.o $(CXXFLAGS)
+
+Count.o: Count.cpp
+	$(CPP) -c Count.cpp -o Count.o $(CXXFLAGS)
+
+Read.o: Read.cpp
+	$(CPP) -c Read.cpp -o Read.o $(CXXFLAGS)
+
+Test.o: Test.cpp
+	$(CPP) -c Test.cpp -o Test.o $(CXXFLAGS)
+
+DataManage.o: DataManage.cpp
+	$(CPP) -c DataManage.cpp -o DataManage.o $(CXXFLAGS)
+
+JudgeStu.o: JudgeStu.cpp
+	$(CPP) -c JudgeStu.cpp -o JudgeStu.o $(CXXFLAGS)
+
+Write.o: Write.cpp
+	$(CPP) -c Write.cpp -o Write.o $(CXXFLAGS)
