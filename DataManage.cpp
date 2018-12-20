@@ -1,6 +1,12 @@
 #include "HeaderFile.h"
 using namespace std;
 
+bool cmp0(Students a, Students b) {	return a.num < b.num; }
+bool cmp1(Students a, Students b) {	return strcmp(a.name,b.name) == 1 ? 0 : 1; }
+bool cmp2(Students a, Students b) {	return a.MathScore < b.MathScore; }
+bool cmp3(Students a, Students b) {	return a.EngScore < b.EngScore; }
+bool cmp4(Students a, Students b) {	return a.CSScore < b.CSScore; }
+
 bool JudgeStu(long long num);
 
 /*void Swap(int a,int b) {

@@ -31,3 +31,4 @@ extern Students Stu[100000];
 extern bool Is_Stu[100000000];
 extern int head, tail, tail1;
 extern int TF;
+

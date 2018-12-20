@@ -1,9 +1,7 @@
 #include "HeaderFile.h"
 using namespace std;
 
-bool cmp(Students a, Students b) {
-	return a.num < b.num;
-}
+bool cmp0(Students a, Students b);
 
 Students Stu1[MAX_SIZE];
 void Write() {
@@ -16,7 +14,7 @@ void Write() {
 		Stu1[++cnt1] = Stu[p];
 		p = Stu[p].next;
 	}
-	sort(Stu1 + 1, Stu1 + cnt1 + 1, cmp);
+	sort(Stu1 + 1, Stu1 + cnt1 + 1, cmp0);
 	_file<<cnt1<<endl;
 	for(int i = 1;i <= cnt1;i++)
 		_file<<Stu1[i].num<<" "<<Stu1[i].name<<" "<<Stu1[i].EngScore

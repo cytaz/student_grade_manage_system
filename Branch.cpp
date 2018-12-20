@@ -1,7 +1,7 @@
 #include "HeaderFile.h"
 using namespace std;
 
-int Inquiry(char ch, int x);
+int Inquiry(char &ch, int x);
 void Inquiry();
 void Opt();
 void Load();
@@ -16,9 +16,9 @@ long long Encode(long long num);
 
 void Branch(int num) {
 	switch(num) {
-		case(1):{ Inquiry();break; }
-		case(2):{ Load();break; }
-		case(3):{
+		case 1:{ Inquiry();break; }
+		case 2:{ Load();break; }
+		case 3:{
 			printf("请选择:\n");
 			printf("1:按学号查询修改\n");
 			printf("2:按名字查询修改\n");
@@ -34,8 +34,8 @@ void Branch(int num) {
 			}
 			break;
 		}
-		case(4):{ Add();break; }
-		case(5):{
+		case 4:{ Add();break; }
+		case 5:{
 			printf("请选择:\n");
 			printf("1:按学号查询删除\n");
 			printf("2:按名字查询删除\n");
@@ -53,10 +53,10 @@ void Branch(int num) {
 			Opt();
 			break;
 		}
-		case(6):{ Count();Opt();break; }
-		//case(7):{}
-		//case(8):{}
-		case(9):{
+		case 6:{ Count();Opt();break; }
+		//case 7:{}
+		//case 8:{}
+		case 9:{
 			fstream _file;
 			_file.open("readme.txt",ios::in);
 			char ch;
@@ -78,7 +78,7 @@ void Branch(int num) {
 			Opt();
 			break;
 		}
-		case(0):{
+		case 0:{
 			//printf("请稍等，系统在进行最后的操作\n"); 
 			Write();
 			printf("感谢您使用本系统，再见!");
